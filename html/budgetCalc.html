@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <!-- Bootstrap Import -->
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/sitewide.css" />
+    <link rel="stylesheet" href="../css/budgetCalc.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Vacation Mind</title>
+  </head>
+  <!--https://www.gloomaps.com/3Hotk3Kb66-->
+  <body>
+    <div class="menu-header">
+      <i class="fa fa-bars"></i>
+      </div>
+      
+      <div class="menu-content">
+        <ul>
+          <li><a href="../html/home.html">Home</a></li>
+          <li><a href="#" class="dropbtn">Trip Planning <i class="fa fa-chevron-down"></i></a>
+            <ul class="dropdown">
+                <li><a href="#"class="dropbtn2">Budgeting<i class="fa fa-chevron-right right"></i></i>
+                </a>
+                  <ul class="dropdown2">
+                    <li><a href="../html/budgetCalc.html">Budget Calculator</a></li>
+                    <li><a href="../html/recommendedBudgets.html">Recommended Budgets</a></li>
+                  </ul>
+                </li>
+                <li><a href="../html/checklist.html">Trip Checklist</a></li>
+            </ul>
+          </li>
+          <li><a href="../html/popularDestinations.html">Popular Destinations</a></li>
+          <li><a href="../html/about.html">About</a></li>
+      </ul>
+      </div>
+      
+    <div class="banner">
+      <p>Budget Calculator</p>
+      <img src="../images/budget/budget_banner.jpg" alt="Person Calculating Budget" />
+    </div>
+
+    <div class="form-intro">
+      <h2>Welcome to the budget form!</h2>
+      <p>
+        This tool is here to help you get a basic understanding on how much you
+        should be spending on your next vacation. To get started, fill out the
+        form below!
+      </p>
+    </div>
+
+    <div class="budget-form">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" />
+
+      <label for="budget">Preferred Budget ($)</label>
+      <input type="number" name="budget" id="budget" required />
+
+      <label for="salary">Annual Salary ($)</label>
+      <input type="number" name="salary" id="salary" required />
+
+      <label for="length">Length of Stay (Days)</label>
+      <input type="number" name="length" id="length" required />
+
+      <button id="submitButton">Submit Form</button>
+    </div>
+
+    <div id="budgetResult">
+        <img src="" alt="">
+
+    </div>
+
+    <div id="budgetBreakdown" style="text-align: center;">
+      <dl>
+        <dt>Salary</dt>
+        <dd id="salaryBox"></dd>
+
+        <dt>Trip Budget</dt>
+        <dd id="budgetBox"></dd>
+
+        <dt>Trip Length</dt>
+        <dd id="lengthBox"></dd>
+
+        <dt>Budget per day</dt>
+        <dd id="perDayBox"></dd>
+    </dl>
+    </div>
+
+      <div id="resultInfo">
+        <h2>How Was This Calculated?</h2>
+        <p>For most vacations, the recommended budget is 5% of your annual income.
+          This gives you enough to enjoy a vacation without breaking the bank! Of course, this figure is only a suggestion.
+          You can adjust it depending on if you want to spend more, or less.
+        </p>
+      </div>
+      
+      <div class="footer">
+        <h2>Matthew Washington</h2>
+        <p>WEB.125.0001</p>
+      </div>
+      
+  </body>
+  <script src="../js/burgerMenu.js"></script>
+  <script src="../js/calculator.js"></script>
+
+</html>
