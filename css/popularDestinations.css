@@ -1,0 +1,120 @@
+.banner {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-height: 40vh;
+  overflow: hidden;
+  margin-top: 0;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.178);
+}
+
+.text-container {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner h2 {
+  color: white;
+  font-size: 4rem;
+  position: relative;
+  font-weight: bold;
+  text-shadow: rgb(0, 0, 0) 1px 0 10px;
+  text-align: center;
+  margin-bottom: 3vh;
+}
+
+.banner p {
+  color: white;
+  font-size: 1.5rem;
+  position: relative;
+  font-weight: bold;
+  margin-top: 3vh;
+  text-shadow: rgb(0, 0, 0) 1px 0 10px;
+}
+
+.banner img {
+  width: 100%;
+  max-height: 40vh;
+  height: auto;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.location-info {
+  text-align: center;
+  padding: 2vh;
+  width: 90%;
+  margin-left: 5%;
+  color: white;
+  margin-top: 3vh;
+  margin-bottom: 4vh;
+  background-color: #7a9cc6;
+}
+.info-header {
+  font-size: 3rem;
+}
+
+.info-about {
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* Locations */
+
+.location-wrapper {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.location {
+  width: 100%;
+  color: rgb(241, 241, 241);
+  background-color: rgb(51, 75, 129);
+  margin-bottom: 10vh;
+  height: auto;
+  overflow: hidden;
+}
+
+.location-header {
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 2vh;
+}
+
+.location-about {
+  width: 60%;
+  padding: 2vh;
+  font-size: 1.4rem;
+  float: right;
+}
+
+.location img {
+  width: 40%;
+  height: 20vh;
+  object-fit: cover;
+  float: left;
+  padding: 0 2vw 0 2vw;
+  margin-bottom: 2vh;
+}
+
+@media (max-width: 630px) {
+  .location img {
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
+    float: left;
+    padding: 0 2vw 0 2vw;
+    margin-bottom: 2vh;
+  }
+  .location-about {
+    width: 100%;
+    padding: 2vh;
+    font-size: 1.2rem;
+  }
+}

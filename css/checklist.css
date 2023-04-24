@@ -1,0 +1,202 @@
+/* Banner */
+.banner {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-height: 40vh;
+  overflow: hidden;
+  margin-top: 0;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.banner p {
+  color: rgb(0, 0, 0);
+  font-size: 4rem;
+  position: absolute;
+  font-weight: bold;
+}
+
+.banner img {
+  width: 100%;
+  max-height: 40vh;
+  height: auto;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.checklist-info {
+  text-align: center;
+  padding: 2vh;
+  width: 90%;
+  margin-left: 5%;
+  color: white;
+  margin-top: 5vh;
+  background-color: #7a9cc6;
+}
+.info-header {
+  font-size: 3rem;
+}
+
+.info-about {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.checkbox-wrap {
+  display: table;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.thumbnailGrid {
+  display: grid;
+  grid: auto / auto auto;
+  gap: 2rem;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+@media (max-width: 950px) {
+  .thumbnailGrid {
+    display: grid;
+    grid: auto / auto;
+    gap: 2rem;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+  }
+}
+
+/* Styling for thumbnails */
+.sectionThumbnail {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+}
+/* .sectionThumbnail:hover {
+
+} */
+.sectionThumbnail:not(.no-hover):hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+.sectionThumbnail p {
+  color: white;
+  font-size: 4rem;
+  position: absolute;
+  font-weight: bold;
+}
+.sectionThumbnail img {
+  width: 100%;
+  max-height: 20vh;
+  height: auto;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.content {
+  display: none;
+  position: absolute;
+  transition: 0.3s ease-in-out;
+}
+
+.displayChecklist {
+  display: block;
+  transition: 0.3s ease-in-out;
+  position: relative;
+}
+
+.financial {
+  float: right;
+}
+
+.container {
+  width: 100%;
+  background-color: rgb(194, 137, 15);
+  display: block;
+  position: relative;
+  padding: 35px;
+  margin-bottom: 12px;
+  margin-top: 2vh;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: center;
+  color: white;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+@media (max-width: 400px) {
+  .container {
+    font-size: 1rem;
+  }
+
+  .sectionThumbnail p {
+    color: white;
+    font-size: 3rem;
+    position: absolute;
+    font-weight: bold;
+  }
+}
+
+/* Checkmark */
+
+.checkmark {
+  position: absolute;
+  right: 2em;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

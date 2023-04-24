@@ -1,0 +1,132 @@
+.myCarousel {
+  height: 10vh;
+  display: block;
+}
+
+.carousel-inner {
+  height: auto;
+}
+
+li {
+  list-style: none;
+}
+
+.carousel-item img {
+  height: 30vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* CSS Grid Declaration */
+.ad-container {
+  width: 80%;
+  margin-left: 10%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 50px;
+  grid-row-gap: 10px;
+}
+
+/* Separate Grid CSS */
+.ad-container {
+  height: auto;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+}
+
+/* Medium Viewport */
+
+/* Ad Boxes */
+.ad {
+  display: flex;
+  position: relative;
+  color: white;
+  width: 100%;
+  overflow: hidden;
+  height: 30vh;
+  max-height: 60vh;
+  transition: all 0.5s;
+}
+
+.ad img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+/* Ad text */
+.ad-text {
+  object-fit: contain;
+  margin: 0;
+  padding: 10px;
+  text-align: left;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(87, 87, 87, 0.5);
+  font-size: 2vw;
+}
+.ad-text p {
+  font-size: 1vw;
+}
+
+@media (max-width: 1200px) {
+  .ad {
+    height: 30vh;
+  }
+}
+
+/* Small Viewport */
+@media (max-width: 800px) {
+  /* CSS Grid Declaration */
+  .ad-container {
+    width: 80%;
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 10px;
+  }
+
+  .ad {
+    display: flex;
+    position: relative;
+    color: white;
+    width: 100%;
+    background-color: rgb(139, 189, 209);
+    max-height: 30vh;
+    margin-top: 8vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+
+  .ad-text {
+    padding: 10px;
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(87, 87, 87, 0.5);
+    font-size: 6vw;
+  }
+
+  .ad-text p {
+    font-size: 4vw;
+  }
+}
+
+/* Universal */
+
+.ad:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  border-radius: 30px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s;
+}
+
+/* Footer */
